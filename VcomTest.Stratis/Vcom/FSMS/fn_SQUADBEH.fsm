@@ -1051,8 +1051,8 @@ class FSM
                 {
                         name = "Two_Minute_Check";
                         itemno = 33;
-                        init = /*%FSM<STATEINIT""">*/"_BackbkCC4 = time;" \n
-                         "_Group call VCM_AIDIFSET;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_BackbkCC4 = time;" \n                         
+                         "	if (VCM_SKILLCHANGE && {!(_Group getVariable [""VCM_Skilldisable"", false])}) then {_Group call VCM_AIDIFSET};" \n/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
